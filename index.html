@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite + TS</title>
+        <link rel="stylesheet" type="text/css" href="./src/style.css" />
+    </head>
+    <body>
+        <main class="z-10 max-w-6xl mx-auto py-4 relative">
+            <div
+                class="fixed h-[30vh] max-w-6xl bg-slate-500 p-20 top-0 w-full left-50 z-[15]"
+            ></div>
+            <section
+                class="newItemEntry mt-10 max-w-4xl mx-auto px-4 fixed w-full left-0 right-0 z-20"
+            >
+                <h1 class="text-5xl font-extrabold mb-10">List of Todo's</h1>
+                <form class="newItemEntry__form" id="itemEntryForm">
+                    <div class="flex gap-2">
+                        <input
+                            class="newItemEntry__input py-2 px-4 w-full outline-none border-none font-bold text-xl placeholder:text-[#ffffff53]"
+                            id="title"
+                            type="text"
+                            maxlength="40"
+                            autocomplete="off"
+                            placeholder="Add Todo"
+                        />
+
+                        <input
+                            type="date"
+                            name="datetime"
+                            id="date"
+                            class="outline-none border-none py-2 px-4 font-bold flex-shrink-2"
+                        />
+
+                        <button
+                            id="addItem"
+                            class="button newItemEntry__button drop-shadow-2xl border-2 px-4 py-1 font-extrabold text-2xl flex items-center hover:bg-green-300 hover:text-[#3c3c3c] hover:border-[#3c3c3c] bg-[#3c3c3c]"
+                            title="Add new item"
+                            aria-label="Add new item to list"
+                        >
+                            +
+                        </button>
+                    </div>
+                    <div>
+                        <textarea
+                            class="text-xl font-bold px-4 placeholder:text-[#ffffff53] py-2 w-full mt-4 resize-none outline-none border-4 border-slate-500"
+                            name="desc"
+                            id="desc"
+                            rows="5"
+                            placeholder="Description "
+                        ></textarea>
+                    </div>
+                </form>
+            </section>
+
+            <section class="listContainer mt-4 px-4 absolute top-[400px] z-10">
+                <div class="relative">
+                    <hr class="my-2 h-1 bg-slate-500 min-w-full w-full" />
+                    <button
+                        id="clearItemsButton"
+                        class="button listTitle__button px-4 absolute -top-8 right-0 bg-slate-500"
+                        title="Clear the list"
+                        aria-label="Remove all items from the list"
+                    >
+                        Clear
+                    </button>
+                </div>
+                <ul
+                    id="listItems"
+                    class="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                >
+                    <li
+                        class="item bg-[#3c3c3c] px-4 py-2 flex-col relative w-full group"
+                    >
+                        <input type="checkbox" id="2" class="checkbox hidden" />
+                        <label
+                            for="2"
+                            class="todo-title font-extrabold text-2xl mb-2 select-none"
+                            >The Title would look like this.</label
+                        >
+                        <p class="desc mt-2">
+                            This Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Vero incidunt corporis quos ex,
+                            assumenda perferendis error rerum facere molestias
+                            voluptas.
+                        </p>
+                        <p class="date mt-2 text-sm">sep 20, 2023: 9:05am</p>
+                        <button
+                            class="button px-5 absolute -right-2 bottom-2 flex items-center justify-center font-bold group"
+                        >
+                            <img
+                                src="./src/assets/remove.svg"
+                                alt="remove icon"
+                                class="remove"
+                            />
+                        </button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
