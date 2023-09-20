@@ -71,7 +71,7 @@ export default class ListTemplate implements DOMList {
             });
 
             const img = document.createElement("img") as HTMLImageElement;
-            img.src = "./src/assets/remove.svg";
+            img.src = "/remove.svg";
             img.alt = "Remove this item from the list ";
             todoDelete.appendChild(img);
 

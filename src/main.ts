@@ -13,7 +13,6 @@ const initApp = (): void => {
 
     itemEntryForm.addEventListener("submit", (event: Event): void => {
         event.preventDefault();
-        console.log("clicked");
         // Get the input values from the form
         const title = document.getElementById("title") as HTMLInputElement;
         const titleText = title.value.trim();
