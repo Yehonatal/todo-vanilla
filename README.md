@@ -1,3 +1,3 @@
-# todo-vanilla
+# Todo-vanilla
 
 Ts vanilla todo app
